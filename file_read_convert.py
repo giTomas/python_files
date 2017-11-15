@@ -8,14 +8,14 @@ import json
 # fileref.close()
 
 
-with open('key.txt') as file:
+with open('key.txt', 'r') as file:
     str = file.readline()
     keys = [x.strip() for x in str.split(',')]
 
 # print(keys)
 
 
-with open('qbdata.txt') as f:
+with open('qbdata.txt', 'r') as f:
     data = []
     for line in f:
 
