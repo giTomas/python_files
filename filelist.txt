@@ -1,0 +1,9 @@
+.gitignore
+filelist.txt
+file_read_convert.py
+file_read_wite.py
+key.txt
+list_files.py
+qbdata.txt
+qbnames.txt
+README.md
