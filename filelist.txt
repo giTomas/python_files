@@ -1,9 +1,11 @@
-.gitignore
-filelist.txt
-file_read_convert.py
-file_read_wite.py
-key.txt
-list_files.py
-qbdata.txt
-qbnames.txt
-README.md
+List of files in dir: C:\Users\SK040122\Desktop\play\python_files
+
+1. .gitignore
+2. filelist.txt
+3. file_read_convert.py
+4. file_read_wite.py
+5. key.txt
+6. list_files.py
+7. qbdata.txt
+8. qbnames.txt
+9. README.md

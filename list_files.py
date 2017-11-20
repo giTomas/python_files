@@ -27,11 +27,14 @@ print(onlyfiles)
 # os.walk #1
 onlyfiles = []
 
-_, _, filenames = next(walk(directory))
+dirpath, _, filenames = next(walk(directory))
 onlyfiles.extend(filenames)
+# onlyfiles = next(walk(directory))[2]
 
 print(onlyfiles)
 
 with open('filelist.txt', 'w') as f:
-    for item in onlyfiles:
-        f.write('{}\n'.format(item))
+    f.write('List of files in dir: {}\n\n'.format(dirpath))
+
+    for idx, item in enumerate(onlyfiles, start=1):
+        f.write('{}. {}\n'.format(idx, item))
