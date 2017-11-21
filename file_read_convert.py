@@ -9,12 +9,14 @@ import json
 
 
 with open('key.txt', 'r') as file:
+
+    # get only firs line keys
     str = file.readline()
     keys = [x.strip() for x in str.split(',')]
 
 # print(keys)
 
-
+# conver to dic -> json
 with open('qbdata.txt', 'r') as f:
     data = []
     for line in f:
@@ -22,12 +24,14 @@ with open('qbdata.txt', 'r') as f:
         # line = line.replace('\s+',  ' ')
         # remove duplicate whitespace
         line = " ".join(line.split())
+
         # values = [x.strip() for x in line.split(' ')]
         values = [x for x in line.split(' ')]
+
         # values = [x.strip() for x in re.split('\s', line)]
         # print(values)
         item = {}
-        for key, value in zip( keys, values):
+        for key, value in zip(keys, values):
             print('{}: {}'.format(key, value))
 
             item[key] = value

@@ -1,5 +1,6 @@
 from os import listdir, getcwd, walk
 from os.path import isfile, join, dirname, abspath
+import glob
 
 # get directory where script is executed
 directory = dirname(abspath(__file__))
@@ -38,3 +39,7 @@ with open('filelist.txt', 'w') as f:
 
     for idx, item in enumerate(onlyfiles, start=1):
         f.write('{}. {}\n'.format(idx, item))
+
+# glob module takes wildcard and returns the full path of files and directories matching the wildcard
+onlytxt = glob.glob(directory + '\*.txt')
+print(onlytxt)
